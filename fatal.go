@@ -2,11 +2,12 @@ package go_filer
 
 import (
 	"log"
+	"os"
 )
 
 
 func logFatal() {
-	log.Fatal("File already exists")
+	log.Fatal(os.ErrExist)
 }
 
 
