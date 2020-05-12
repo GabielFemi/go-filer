@@ -10,4 +10,6 @@ func logFatal() {
 	log.Fatal(os.ErrExist)
 }
 
-
+func logDoesNotExist() {
+	log.Fatal(os.ErrNotExist)
+}
