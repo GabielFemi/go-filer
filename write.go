@@ -1,14 +1,13 @@
 package go_filer
 
 import (
-	"fmt"
 	"io/ioutil"
 )
 
 func WriteFile(message string, filePath string) bool{
 	fileExists := FileExists(filePath)
 	if fileExists {
-		fmt.Println("The file already exists!")
+		logFatal()
 		return false
 	}else {
 		messageToByte := []byte (message)
